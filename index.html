@@ -1,9 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Andr Evich</title>
-    </head>
-    <body>
-        <h1>Andr Evich</h1>
-    </body>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Andrii Yaroshevskyi — Tech Lead</title>
+    <meta name="description" content="Andrii Yaroshevskyi — Tech Lead / Senior Software Engineer based in Warsaw, Poland.">
+    <meta name="theme-color" content="#0a0a0a">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0a0a0a;
+            --surface: #141414;
+            --line: #262626;
+            --text: #e8e8e8;
+            --muted: #8a8a8a;
+            --accent: #ff7a1a;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font: 16px/1.65 "Inter", system-ui, -apple-system, sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        ::selection { background: var(--accent); color: var(--bg); }
+        a { color: inherit; text-decoration: none; }
+        .wrap { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+        .mono { font-family: "JetBrains Mono", ui-monospace, monospace; }
+
+        header { padding: 96px 0 72px; }
+        .tag { color: var(--accent); font-size: 14px; letter-spacing: .04em; }
+        h1 {
+            font-size: clamp(40px, 8vw, 68px);
+            line-height: 1.05;
+            font-weight: 700;
+            letter-spacing: -.03em;
+            margin: 16px 0 20px;
+        }
+        h1 span { color: var(--accent); }
+        .role { color: var(--muted); font-size: 18px; }
+        .cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 36px; }
+        .btn {
+            display: inline-block;
+            padding: 11px 20px;
+            border: 1px solid var(--accent);
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 500;
+            transition: background .2s, color .2s;
+        }
+        .btn.primary { background: var(--accent); color: var(--bg); }
+        .btn:hover { background: transparent; color: var(--accent); }
+        .btn:not(.primary):hover { background: var(--accent); color: var(--bg); }
+
+        section { padding: 56px 0; border-top: 1px solid var(--line); }
+        h2 {
+            font-family: "JetBrains Mono", ui-monospace, monospace;
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: .12em;
+            margin-bottom: 28px;
+        }
+        p.lead { font-size: 18px; color: var(--text); }
+        p.lead + p.lead { margin-top: 16px; }
+        .muted { color: var(--muted); }
+
+        .job { display: grid; grid-template-columns: 150px 1fr; gap: 20px; padding: 14px 0; }
+        .job .when { color: var(--muted); font-size: 13px; padding-top: 3px; }
+        .job h3 { font-size: 16px; font-weight: 500; }
+        .job .co { color: var(--accent); }
+        .job p { color: var(--muted); font-size: 15px; margin-top: 4px; }
+
+        .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+        .chips li {
+            list-style: none;
+            font-size: 13px;
+            padding: 5px 12px;
+            background: var(--surface);
+            border: 1px solid var(--line);
+            border-radius: 999px;
+            color: var(--text);
+        }
+
+        .contact { display: grid; gap: 2px; }
+        .contact a, .contact div {
+            display: flex;
+            justify-content: space-between;
+            gap: 16px;
+            padding: 16px 0;
+            border-bottom: 1px solid var(--line);
+            transition: color .2s, padding .2s;
+        }
+        .contact a:hover { color: var(--accent); padding-left: 8px; }
+        .contact .k { color: var(--muted); font-size: 13px; min-width: 90px; }
+        .contact .v { text-align: right; word-break: break-all; }
+
+        footer { padding: 48px 0 64px; color: var(--muted); font-size: 13px; }
+        footer .dot { color: var(--accent); }
+
+        @media (max-width: 560px) {
+            header { padding: 64px 0 48px; }
+            .job { grid-template-columns: 1fr; gap: 2px; }
+        }
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <header>
+        <div class="tag mono">// hello, world</div>
+        <h1>Andrii<br>Yaroshevskyi<span>.</span></h1>
+        <div class="role">Tech Lead / Senior Software Engineer · Warsaw, Poland</div>
+        <div class="cta">
+            <a class="btn primary" href="mailto:andr.evich11@gmail.com">Get in touch</a>
+            <a class="btn" href="resume.pdf" target="_blank" rel="noopener">Download résumé</a>
+        </div>
+    </header>
+
+    <section id="about">
+        <h2>About</h2>
+        <p class="lead">I'm a backend-focused engineer and tech lead with 10+ years of experience building
+            scalable systems: from microservice architectures and billing platforms to ML-powered
+            user analytics for high-traffic applications.</p>
+        <p class="lead muted">I enjoy turning complex problems into clean, observable systems, and helping
+            teams grow along the way through mentoring, solid CI/CD, and pragmatic architecture.</p>
+    </section>
+
+    <section id="experience">
+        <h2>Experience</h2>
+        <div class="job">
+            <div class="when mono">2020 — now</div>
+            <div>
+                <h3>Senior Software Engineer / Team Lead <span class="co">@ Apomedical</span></h3>
+                <p>Microservices transformation, billing &amp; financial reporting, ML-driven user behavior prediction.</p>
+            </div>
+        </div>
+        <div class="job">
+            <div class="when mono">2019 — 2021</div>
+            <div>
+                <h3>Software Engineer <span class="co">@ ETS International</span></h3>
+                <p>Backend systems, content provider integrations, sales analytics platform.</p>
+            </div>
+        </div>
+        <div class="job">
+            <div class="when mono">2018 — 2019</div>
+            <div>
+                <h3>Full Stack Engineer <span class="co">@ Hotel Connect</span></h3>
+                <p>Internal CRM for hotel operations, performance improvements.</p>
+            </div>
+        </div>
+        <div class="job">
+            <div class="when mono">2017 — 2018</div>
+            <div>
+                <h3>Software Developer <span class="co">@ GREEN WEB</span></h3>
+                <p>PHP web development.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="stack">
+        <h2>Stack</h2>
+        <ul class="chips mono">
+            <li>PHP</li><li>Symfony</li><li>Laravel</li><li>Go</li><li>Node.js</li><li>NestJS</li>
+            <li>Python</li><li>TypeScript</li><li>React</li><li>Vue.js</li><li>PostgreSQL</li><li>MySQL</li>
+            <li>MongoDB</li><li>Redis</li><li>RabbitMQ</li><li>Elasticsearch</li><li>Docker</li>
+            <li>Kubernetes</li><li>Grafana</li><li>CI/CD</li>
+        </ul>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <div class="contact">
+            <a href="mailto:andr.evich11@gmail.com"><span class="k mono">email</span><span class="v">andr.evich11@gmail.com</span></a>
+            <a href="tel:+48883481676"><span class="k mono">phone</span><span class="v">+48 883 481 676</span></a>
+            <a href="https://www.linkedin.com/in/andrii-yaroshevskyi-57577814b/" target="_blank" rel="noopener"><span class="k mono">linkedin</span><span class="v">in/andrii-yaroshevskyi</span></a>
+            <a href="https://github.com/andrevich95" target="_blank" rel="noopener"><span class="k mono">github</span><span class="v">andrevich95</span></a>
+            <div><span class="k mono">location</span><span class="v">Warsaw, Poland</span></div>
+        </div>
+    </section>
+
+    <footer class="mono">
+        © <span id="y">2026</span> Andrii Yaroshevskyi <span class="dot">●</span> EN · PL · UA
+        <span class="dot">●</span> <a href="up-ahead-maze/privacy.html" style="text-decoration:underline">Up Ahead Maze — Privacy</a>
+    </footer>
+</div>
+<script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
 </html>
